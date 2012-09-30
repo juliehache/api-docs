@@ -1,10 +1,10 @@
-# User Resources
+# Visualization Resources
 
-    GET example/:id
+    DELETE https://:HIVE_NAME.buzzdata.com/:username/:dataset_short_name/articles/:uuid
 
 ## Description
 
-***
+Delete the corresponding visualization with the given UUID.
 
 ## Requires authentication
 
@@ -12,21 +12,21 @@ You must be using a registered oAuth2 client created in your My Applications men
 
 ## Parameters
 
-***
+- **:HIVE_NAME** The specific Hive you wish to query - leave empty for BuzzData.com
+- **:USENAME** The username you would like to query
+- **:DATASET_SHORT_NAME** The shortname of the dataset the article is attached to
+- **:UUID** = The Visualization UUID
 
 ## Return format
 
-***
+A JSON packet indicating the success of the operation.
 
 ## Errors
 
 ***
 
 ## Example
-**Request**
-
-    Code Example
 
 **Return**
 
-    Code Example
+    { 'success': 'ok' }

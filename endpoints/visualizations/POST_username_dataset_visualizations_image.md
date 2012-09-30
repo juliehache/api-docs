@@ -1,10 +1,10 @@
-# User Resources
+# Visualization Resources
 
-    GET example/:id
+    POST https://:HIVE_NAME.buzzdata.com/:username/:dataset_short_name/visualizations/
 
 ## Description
 
-***
+POST an image you wish to user as a visualization.
 
 ## Requires authentication
 
@@ -12,21 +12,25 @@ You must be using a registered oAuth2 client created in your My Applications men
 
 ## Parameters
 
-***
+- **:HIVE_NAME** The specific Hive you wish to query - leave empty for BuzzData.com
+- **:USENAME** The username you would like to query
+- **:DATASET_SHORT_NAME** The shortname of the dataset the article is attached to
+
+** POST Parameters
+
+- **:IMAGE** The MultiPart POST image you wish to use
 
 ## Return format
 
-***
+A JSON packet indicating the success of the operation.
 
 ## Errors
 
 ***
 
 ## Example
-**Request**
-
-    Code Example
 
 **Return**
 
-    Code Example
+      { 'success': 'ok' }
+    

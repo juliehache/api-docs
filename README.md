@@ -20,8 +20,8 @@ The API currently limits the requests you can make against it hourly. We have pr
 
 #### Users
 
-- **[<code>GET</code> username](https://github.com/buzzdata/api-docs/blob/master/endpoints/users/GET_username.md)**
-- **[<code>GET</code> username/datasets/list](https://github.com/buzzdata/api-docs/blob/master/endpoints/users/GET_username_datasets_list.md)**
+- **[<code>GET</code> :username](https://github.com/buzzdata/api-docs/blob/master/endpoints/users/GET_username.md)**
+- **[<code>GET</code> :username/datasets/list](https://github.com/buzzdata/api-docs/blob/master/endpoints/users/GET_username_datasets_list.md)**
 - **[<code>POST</code> users](https://github.com/buzzdata/api-docs/blob/master/endpoints/users/POST_users.md)**
 
 #### Licenses
@@ -50,9 +50,24 @@ The API currently limits the requests you can make against it hourly. We have pr
 
 #### Datafiles
 
-- **[<code>POST</code> username](https://github.com/buzzdata/api-docs/blob/master/endpoints/datafiles/POST_username_dataset_short_name_create_datafile.md)**
+- **[<code>POST</code> :username](https://github.com/buzzdata/api-docs/blob/master/endpoints/datafiles/POST_username_dataset_short_name_create_datafile.md)**
 
-#### Row Level Access
+#### Articles
+
+- **[<code>DELETE</code> :username/:dataset_short_name/articles/:uuid](https://github.com/buzzdata/api-docs/blob/master/endpoints/articles/DELETE_username_dataset_articles_uuid.md)**
+- **[<code>GET</code> :username/:dataset_short_name/articles](https://github.com/buzzdata/api-docs/blob/master/endpoints/articles/GET_username_dataset_articles.md)**
+- **[<code>GET</code> :username/:dataset_short_name/articles/:uuid](https://github.com/buzzdata/api-docs/blob/master/endpoints/articles/GGET_username_dataset_articles_uuid.md)**
+- **[<code>POST</code> :username/:dataset_short_name/articles](https://github.com/buzzdata/api-docs/blob/master/endpoints/articles/POST_username_dataset_articles_url.md)**
+
+#### Visualizations
+
+- **[<code>DELETE</code> :username/:dataset_short_name/visualizations/:uuid](https://github.com/buzzdata/api-docs/blob/master/endpoints/articles/DELETE_username_dataset_visualization_uuid.md)**
+- **[<code>GET</code> :username/:dataset_short_name/visualizations](https://github.com/buzzdata/api-docs/blob/master/endpoints/articles/GET_username_dataset_visualizations.md)**
+- **[<code>GET</code> :username/:dataset_short_name/visualizations/:uuid](https://github.com/buzzdata/api-docs/blob/master/endpoints/articles/GGET_username_dataset_visualizations_uuid.md)**
+- **[<code>POST</code> :username/:dataset_short_name/visualizations](https://github.com/buzzdata/api-docs/blob/master/endpoints/articles/POST_username_dataset_visualizations_url.md)**
+- **[<code>POST</code> :username/:dataset_short_name/visualizations](https://github.com/buzzdata/api-docs/blob/master/endpoints/articles/POST_username_dataset_visualizations_image.md)**
+
+#### Row Level Dataset Access
 
 - **[Overview](https://github.com/buzzdata/api-docs/blob/master/endpoints/row_level/overview.md)**
 - **[<code>DELETE</code> :username/:dataset_short_name/:datafile_uuid/stage/:stage_id](https://github.com/buzzdata/api-docs/blob/master/endpoints/row_level/POST_username_dataset_short_name_datafile_uuid_stage_stage_id.md)**
