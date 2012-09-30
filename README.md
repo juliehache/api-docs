@@ -63,7 +63,7 @@ The API currently limits the requests you can make against it hourly. We have pr
 
 - **[<code>DELETE</code> :username/:dataset_short_name/visualizations/:uuid](https://github.com/buzzdata/api-docs/blob/master/endpoints/articles/DELETE_username_dataset_visualization_uuid.md)**
 - **[<code>GET</code> :username/:dataset_short_name/visualizations](https://github.com/buzzdata/api-docs/blob/master/endpoints/articles/GET_username_dataset_visualizations.md)**
-- **[<code>GET</code> :username/:dataset_short_name/visualizations/:uuid](https://github.com/buzzdata/api-docs/blob/master/endpoints/articles/GGET_username_dataset_visualizations_uuid.md)**
+- **[<code>GET</code> :username/:dataset_short_name/visualizations/:uuid](https://github.com/buzzdata/api-docs/blob/master/endpoints/articles/GET_username_dataset_visualizations_uuid.md)**
 - **[<code>POST</code> :username/:dataset_short_name/visualizations](https://github.com/buzzdata/api-docs/blob/master/endpoints/articles/POST_username_dataset_visualizations_url.md)**
 - **[<code>POST</code> :username/:dataset_short_name/visualizations](https://github.com/buzzdata/api-docs/blob/master/endpoints/articles/POST_username_dataset_visualizations_image.md)**
 
