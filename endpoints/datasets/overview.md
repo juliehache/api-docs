@@ -4,7 +4,7 @@ Publishing datasets involves the following process:
 
 2) [Get a license](https://github.com/buzzdata/api-docs/blob/master/endpoints/licenses/GET_licenses.md)
 
-3) [Create a dataset object (requires a topic ID and license)]((https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/POST_username_datasets.md)
+3) [Create a dataset object (requires a topic ID and license)](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/POST_username_datasets.md)
 
 4) [Create a data file on the dataset.](https://github.com/buzzdata/api-docs/blob/master/endpoints/datafiles/POST_username_dataset_short_name_create_datafile.md)
 
