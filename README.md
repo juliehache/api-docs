@@ -44,8 +44,8 @@ The API currently limits the requests you can make against it hourly. We have pr
 - **[<code>GET</code> :username/:dataset_short_name](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/GET_username_dataset_short_name.md)**
 - **[<code>GET</code> :username/:dataset_short_name/list_datafiles](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/GET_username_dataset_short_name_list_datafiles.md)**
 - **[<code>POST</code> upload_url](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/POST_upload_datafile_with_upload_code.md)**
-- **[<code>POST</code> :username/:dataset_short_name/:datafile_uuid/download_request](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/POST_dataset_short_name_datafile_uuid_download_request.md)**
-- **[<code>POST</code> :username/:dataset_short_name/upload_request](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/POST_dataset_short_name_upload_request.md)**
+- **[<code>POST</code> :username/:dataset_short_name/:datafile_uuid/download_request](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/POST_username_dataset_short_name_datafile_uuid_download_request.md)**
+- **[<code>POST</code> :username/:dataset_short_name/upload_request](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/POST_username_dataset_short_name_upload_request.md)**
 - **[<code>POST</code> :username/datasets](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/POST_username_datasets.md)**
 
 #### Datafiles
