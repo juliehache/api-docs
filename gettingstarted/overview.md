@@ -103,6 +103,9 @@ You will have to make sure the following link tags are present in your Applicati
 - Make sure you application pages have the correct ```link``` tags as mentioned above in the ```HEAD``` HTML tag of your pages.
 - Implement an oEmbed endpoint that will take a ```url``` query string parameter, look up the resource internally, and respond with a JSON packet as outlined above. 
 
+An additional benefit is that Users can also take the URL of their Visualization from you app and use the BuzzData interface to add it manually, or even embed that output anywhere that understands the oEmbed protocol, like Pinterest for example.
+
+
 
 ## Appendix A - HMAC Calculations
 
