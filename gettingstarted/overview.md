@@ -16,7 +16,7 @@
 
 	![RegisteredApp](https://raw.github.com/buzzdata/api-docs/master/gettingstarted/images/registered_app.png)
   
-	**Note**: BuzzData uses oAuth2 as its authentication mechanism, and should work   with any oAuth2 library for the language you care to use. If you have any problems please let us know.
+	**Note**: BuzzData uses oAuth2 as its authentication mechanism, and should work with any oAuth2 library for the language you care to use. If you have any problems please let us know.
 
 	**Note**: The Application URL should be the URL that initiates the Application  interaction with the user. This URL will be called with the logged in username, the   origin (app_store, dataroom, datafile), and the dataroom short name if the origin   is a dataroom, datafile UUID if the origin is a datafile, as query string parameters,   ordered alphabetically.  
 

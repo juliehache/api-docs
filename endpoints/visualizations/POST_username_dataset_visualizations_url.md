@@ -19,6 +19,7 @@ You must be using a registered oAuth2 client created in your My Applications men
 ** POST Parameters
 
 - **:URL** The URL of the visualization you wish to create. 
+- **:APP_RESOURCE** [true, false] Indicate that this visualization is the result of an Application. (optional, defaults to false)
 
 ## Return format
 
