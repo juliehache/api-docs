@@ -54,7 +54,57 @@ Application activation from a Dataset is achieved by the Applications menu on th
 
 **NOTE**: The application ignition URL will soon contain Hive information along with the username and dataroom shortname, version and datafile UUID as appropriate. 
 
-## Appendix A - HMAC Calculations
+## Registering Application Output with BuzzData as Visualizations
+
+At the moment, BuzzData supports a flag on the [Create Visualization from URL](https://github.com/buzzdata/api-docs/blob/master/endpoints/visualizations/POST_username_dataset_visualizations_url.md) call that will use [Embed.ly](http://embed.ly/) to generate a preview from the URL by using the [oEmbed protocol](http://www.oembed.com/), and then launch the passed URL inside an iFrame when clicked in the Visualization gallery. So for example, you would make the following BuzzData API call (remember to use an oAuth2 library):
+
+	POST https://:HIVE_NAME.buzzdata.com/:username/:dataset_short_name/visualizations/
+
+With the ```POST``` body containing the ```URL``` parameter that links back to where the Visualization lives, and also the ```APP_RESOURCE``` parameter set to true. 
+
+### Implementing oEmbed in your Application
+In order for this to work, your application will have to implement an oEmbed endpoint that can be passed a URL that belongs to your site, and the response should be an oEmbed response containing information about where a preview image can be found, it's dimensions etc. For example:
+
+- Let's say you have an application that makes cool interactive visualizations from data pulled from BuzzData via the API.
+- Say your application generates an interactive visualization at ```http://mycoolapp.com/visualizations/johns-visualization```
+	- This page should have the link tags mentioned below in its ```HEAD``` tag so that Embedly knows where to make the next call. 
+- Your application should implement an endpoint like http://mycoolapp.com/oembed and take a query string parameter of url=http://mycoolapp.com/visualizations/johns-visualization, e.g. ```http://mycoolapp.com/oembed?url=http://mycoolapp.com/visualizations/johns-visualization```
+- Your app should be able to dissect the passed URL and lookup the original visualization internally, and return back the following JSON response:
+
+		{
+			"version": "1.0",
+			"type": "photo",
+			"width": 240,
+			"height": 160,
+			"title": "Kittens Born in 2012",
+			"url": "http://farm4.static.flickr.com/3123/2341623661_7c99f48bbf_m.jpg",
+			"author_name": "John McDowall",
+			"author_url": "http://mycoolapp.com/users/john/",
+			"provider_name": "My Cool App",
+			"provider_url": "http://mycoolapp.com/"
+		}
+
+In the above example, because the ```type``` is ```photo``` the expectation is that the ```url``` parameter leads to an image that can be used as a preview thumbnail. If you wanted an embedded HTML fragment that is suitable for a preview, then the ```type``` should be ```rich```. You can find out more by reading the [oEmbed documentation.](http://www.oembed.com/)
+
+### Making your oEmbed endpoint discoverable
+
+You will have to make sure the following link tags are present in your Application's HTML ```HEAD``` tag contents, so that Embedly can know where to call to get the oEmbed JSON fragment it needs:
+
+	<link rel="alternate" type="application/json+oembed"
+				href="http://mycoolapp.com/oembed?url=http://mycoolapp.com/visualizations/johns-visualization"
+				title="Kittens Born in 2012 oEmbed Profile" />
+
+	<link rel="alternate" type="text/xml+oembed"
+		href="http://mycoolapp.com/oembed?url=http://mycoolapp.com/visualizations/johns-visualization"
+		title="Kittens Born in 2012 oEmbed Profile" />
+
+### Summary
+
+- Make sure you application pages have the correct ```link``` tags as mentioned above in the ```HEAD``` HTML tag of your pages.
+- Implement an oEmbed endpoint that will take a ```url``` query string parameter, look up the resource internally, and respond with a JSON packet as outlined above. 
+
+
+## Appendix A - HMAC Calculations
 
 An [HMAC](http://en.wikipedia.org/wiki/HMAC) signature is also included of all of the parameters in the query string using your Consumer Secret as the Key. This will allow you to take the query string parameters, perform the same HMAC calculation and confirm that the request is legitimate. You can calculate the HMAC by taking the query string parameters in alphabetical order, including the ampersands in the query string like so: 
 
