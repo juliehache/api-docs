@@ -30,12 +30,13 @@ JSON describing the User details.
     {
     "user": {
         "avatar": "https://buzzdata.com/images/avatars/unknown_warrior.png?1341239183", 
+        "email": "test@example.com",
         "datasets_count": 0, 
         "description": "", 
         "followers_count": 0, 
         "id": "testuser", 
         "location": "", 
-        "name": null, 
+        "name": "Test User", 
         "url": "https://testhive.buzzdata.com/testuser"
         }
     }

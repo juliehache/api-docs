@@ -30,6 +30,7 @@ A JSON Array containing the public Datasets.
     [
       {
         "id": "testuser/bicycle-counts-and-locations", 
+        "shortname": "bicycle-counts-and-locations",
         "name": "Bicycle Counts and Locations", 
         "public": false, 
         "readme": "Number of bikes at given intersections at given times at given locations throughout the city.", 
