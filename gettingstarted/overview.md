@@ -10,7 +10,7 @@
 
 3. Fill i￼n all of the Application details in the pop up modal box and click Register Application:
 
-	￼**Note**: Application icons should be 205x205 pixels. If you choose not to upload   one at this stage you can edit the application later and add an appropriate icon, but a default BuzzData icon will be used until then to represent the Application. 
+	￼**Note**: Application icons should be 205x205 pixels. If you choose not to upload one at this stage you can edit the application later and add an appropriate icon, but a default BuzzData icon will be used until then to represent the Application. 
 
 4. Once your application details have all been completed and the App is registered, its tokens and callback URLs will display in the 'Applications you have registered' section:
 
@@ -18,7 +18,7 @@
   
 	**Note**: BuzzData uses oAuth2 as its authentication mechanism, and should work with any oAuth2 library for the language you care to use. If you have any problems please let us know.
 
-	**Note**: The Application URL should be the URL that initiates the Application  interaction with the user. This URL will be called with the logged in username, the   origin (app_store, dataroom, datafile), and the dataroom short name if the origin   is a dataroom, datafile UUID if the origin is a datafile, as query string parameters,   ordered alphabetically.  
+	**Note**: The Application URL should be the URL that initiates the Application  interaction with the user. This URL will be called with the username that the application is to act on behalf of, the origin (app_store, dataroom, datafile), and the dataroom id if the origin is a dataroom, datafile UUID if the origin is a datafile, as query string parameters, ordered alphabetically.  
 
 	**Note**: For testing purposes, you can run an application on localhost and supply  those details in the Application registration and it will work.
 
@@ -30,15 +30,15 @@
 ## User Application Initiation Flow From App Store
 
 1. A user will select an Application to activate from the App Store at [http://buzzdata.com/appstore](http://buzzdata.com/appstore)
-2. ￼A Modal box will appear which allows the user to activate the App on their account.
+2. A Modal box will appear which allows the user to activate the App on their account.
 	
-	**NOTE**: The Application will have to handle the instance where the user does not  authorize the Application by ticking the box - in this case the oAuth access token  will be in the invalid_grant state. Once the user authorizes the Application, your Application will be free to make any API calls on behalf of the user and display results in the modal dialogue. 
+		**NOTE**: The Application will have to handle the instance where the user does not  authorize the Application by ticking the box - in this case the oAuth access token  will be in the invalid_grant state. Once the user authorizes the Application, your Application will be free to make any API calls on behalf of the user and display results in the modal dialogue. 
 
-	**NOTE**: Since the origin at this point will be app-store, your application will not be  passed any details associated with a Dataroom. You should decide what you   want to show the user at this point, it could be a list of their datarooms or what  have you.
+		**NOTE**: Since the origin at this point will be app-store, your application will not be  passed any details associated with a Dataroom. You should decide what you want to show the user at this point, it could be a list of their datarooms or what  have you.
 	
-  	**NOTE**: The Application should store the oAuth2 authorization token associated  with the user name so that future activations do not require re-authorization of  the application. This will work as BuzzData tokens will not expire. 
+  	**NOTE**: BuzzData tokens will not expire. Future activations by the user will not show the Authorization screen unless the token access is revoked by the user. 
   	
-  	**NOTE**: The application should implement a ‘Save’ button that signals that the  user is done manipulating their data and the Application should save the results  back to BuzzData.   
+  	**NOTE**: The application should implement a ‘Save’ button that signals that the  user is done manipulating their data and the Application should save the results back to BuzzData.   
 
 3. At this point the Application is authorized on the Users account and will also appear in the list of Applications in their Datarooms and Datafile versions.
 ￼
@@ -69,7 +69,7 @@ In order for this to work, your application will have to implement an oEmbed end
 - Say your application generates an interactive visualization at ```http://mycoolapp.com/visualizations/johns-visualization```
 	- This page should have the link tags mentioned below in its ```HEAD``` tag so that Embedly knows where to make the next call. 
 - Your application should implement an endpoint like http://mycoolapp.com/oembed and take a query string parameter of url=http://mycoolapp.com/visualizations/johns-visualization, e.g. ```http://mycoolapp.com/oembed?url=http://mycoolapp.com/visualizations/johns-visualization```
-- Your app should be able to dissect the passed URL and lookup the original visualization internally, and return back the following JSON response:
+- Your app should be able to dissect the passed URL and lookup the original visualization internally, and return back the following example JSON response:
 
 		{
 			"version": "1.0",
@@ -83,6 +83,9 @@ In order for this to work, your application will have to implement an oEmbed end
 			"provider_name": "My Cool App",
 			"provider_url": "http://mycoolapp.com/"
 		}
+
+- If your application is embedding as a interactive HTML visualization then you should investigate the ```rich``` type and set the width and height to be the optimal viewing size for your application. 
+- A thumbnail_url parameter should be passed to an image that represents what the visualization will look like. 
 
 In the above example, because the ```type``` is ```photo``` the expectation is that the ```url``` parameter leads to an image that can be used as a preview thumbnail. If you wanted an embedded HTML fragment that is suitable for a preview, then the ```type``` should be ```rich```. You can find out more by reading the [oEmbed documentation.](http://www.oembed.com/)
 

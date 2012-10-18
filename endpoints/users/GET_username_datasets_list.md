@@ -4,7 +4,7 @@
 
 ## Description
 
-Returns a list of any user's public datasets.
+Returns a list of any user's public datasets. If this call is used to view another users' details, it will return the public datasets of that user along with any of the user's datasets that the API user is a collaborator on.
 
 ## Requires authentication
 
