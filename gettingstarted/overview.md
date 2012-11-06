@@ -1,6 +1,6 @@
 ## Application Registration Overview
 
-1. Create or use an existing BuzzData account on [http://buzzdata.com](http://buzzdata.com)
+1. Create or use an existing BuzzData account on the BuzzData staging environment. Contact [support@buzzdata.com](mailto:support@buzzdata.com) to request access.
 
 	![AppMenu](https://raw.github.com/buzzdata/api-docs/master/gettingstarted/images/menu.png)
 

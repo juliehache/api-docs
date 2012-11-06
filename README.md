@@ -3,6 +3,17 @@ BuzzData API
 
 The BuzzData API allows you to access functionality and data programatically via oAuth2 secured API calls. 
 
+**NOTE: This documentation covers the new version of the API that will be released soon. If you want access to this
+    please contact [support@buzzdata.com](mailto:support@buzzdata.com) to request access. **
+    
+If you are looking for the documentation for the current public API on buzzdata.com, head to the [FAQ](http://buzzdata.com/faq/api).
+    
+
+## Pre-requisites
+
+- In order to use the API, you must be able to use an oAuth2 library in the language of your choice.
+- All API calls should be made over SSL connections.
+
 ## Getting Started
 
 BuzzData's API is [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer) based and uses basic HTTP communication with JSON responses. The API is only available to registered client applications, but it's easy to create one. You can follow the [getting started guide](https://github.com/buzzdata/api-docs/blob/master/gettingstarted/overview.md). 
