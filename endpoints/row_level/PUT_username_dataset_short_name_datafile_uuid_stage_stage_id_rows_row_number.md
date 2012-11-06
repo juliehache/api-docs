@@ -1,4 +1,4 @@
-# User Resources
+# Row Level Resources
 
     PUT https://:HIVE_NAME.buzzdata.com/api/:USERNAME/:DATASET_SHORT_NAME/:DATAFILE_UUID/stage/:STAGE_ID/rows/:ROW_NUMBER
 
