@@ -22,14 +22,15 @@
 
 	**Note**: For testing purposes, you can run an application on localhost and supply  those details in the Application registration and it will work.
 
-5. At this stage your application will appear in the App Store which is at the URL http://buzzdata.com/appstore and in a user’s Datarooms and Datafile as a selectable application. 
+5. At this stage your application will appear in the App Store which is at the URL /appstore and in a user’s Datarooms and Datafile as 
+a selectable application. 
 
 	![AppStore](https://raw.github.com/buzzdata/api-docs/master/gettingstarted/images/app_store.png)
 
 
 ## User Application Initiation Flow From App Store
 
-1. A user will select an Application to activate from the App Store at [http://buzzdata.com/appstore](http://buzzdata.com/appstore)
+1. A user will select an Application to activate from the App Store at /appstore.
 2. A Modal box will appear which allows the user to activate the App on their account.
 	
 		**NOTE**: The Application will have to handle the instance where the user does not  authorize the Application by ticking the box - in this case the oAuth access token  will be in the invalid_grant state. Once the user authorizes the Application, your Application will be free to make any API calls on behalf of the user and display results in the modal dialogue. 
