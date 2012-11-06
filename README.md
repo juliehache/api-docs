@@ -61,6 +61,7 @@ The API currently limits the requests you can make against it hourly. We have pr
 ## Client Libraries
 
 - [Ruby](https://github.com/buzzdata/buzzdata_client)
+- Written one? Let us know at [support@buzzdata.com](mailto:support@buzzdata.com?subject=I wrote a client library for BuzzData.)
 
 ## Endpoints
 
