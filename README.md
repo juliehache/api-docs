@@ -17,6 +17,34 @@ Application from being loaded inside an iFrame by the Browser. You should use th
 read more about [here](http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx). Please contact
 [support@buzzdata.com](mailto:support@buzzdata.com) if you have any queries about this flag.
 
+## Entity Relationship Overview
+```
+
+
+                                                                 +-------------+
+                                +-------------------+            |Topics       |
+                                | Dataset           |----------->|-------------|
+                                |-------------------| 1        n |             |
+                                |                   |            |             |
+      +------------------+      |                   |            +-------------+
+      | Datafile         |n    1|                   |
+      |------------------|<-----|                   |----------->+----------+
+      |                  |      +-------------------+ 1        1 | License  |
+      |                  |        |1             1|              |----------|
+      |                  |        |               |              |          |
+      |                  |        |               |              |          |
+      |                  |        |               |              +----------+
+      |                  |        |               |
+      +------------------+        |n             n|
+                                  v               v
+                       +---------------+      +-----------+
+                       | Visualization |      | Article   |
+                       |---------------|      |-----------|
+                       |               |      |           |
+                       |               |      |           |
+                       +---------------+      +-----------+
+```
+
 ## Getting Started
 
 BuzzData's API is [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer) based and uses basic HTTP communication with JSON responses. The API is only available to registered client applications, but it's easy to create one. You can follow the [getting started guide](https://github.com/buzzdata/api-docs/blob/master/gettingstarted/overview.md). 
