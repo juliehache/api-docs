@@ -59,16 +59,16 @@ Datasets are the overall container for Datafiles, Articles, Visualizations etc.
 
 - **[Overview](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/overview.md)**
 - **[<code>POST</code> :username/datasets](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/POST_username_datasets.md)** - Create a Dataset object to allow the uploading and publishing of Datafiles.
-- **[<code>POST</code> :username/:dataset_short_name/upload_request](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/POST_username_dataset_short_name_upload_request.md)** - Upload a new Datafile to a Dataroom. 
+- **[<code>POST</code> :username/:dataset_short_name/upload_request](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/POST_username_dataset_short_name_upload_request.md)** - Upload a new Datafile to a Dataset. 
 - **[<code>GET</code> data_files/:DATAFILE_UUID/history](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/GET_data_files_datafile_uuid_history.md)** - To retrieve the version history and release notes of a dataset.
 - **[<code>GET</code> :username/:dataset_short_name](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/GET_username_dataset_short_name.md)** - Retrieve the information about a Dataset.
-- **[<code>GET</code> :username/:dataset_short_name/list_datafiles](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/GET_username_dataset_short_name_list_datafiles.md)** - Retrieves a list of Datafiles associated with a Dataset/Dataroom.
+- **[<code>GET</code> :username/:dataset_short_name/list_datafiles](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/GET_username_dataset_short_name_list_datafiles.md)** - Retrieves a list of Datafiles associated with a Dataset.
 - **[<code>POST</code> upload_url](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/POST_upload_datafile_with_upload_code.md)** - Send a POST request to the URL returned by your `upload_request`
 - **[<code>POST</code> :username/:dataset_short_name/:datafile_uuid/download_request](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/POST_username_dataset_short_name_datafile_uuid_download_request.md)** - Create a `download_request`
 - **[<code>DELETE</code> :username/:dataset_short_name](https://github.com/buzzdata/api-docs/blob/master/endpoints/datasets/DELETE_username_dataset_shortname.md)** - Delete a Dataset.
 
 #### Datafiles
-Datafiles are the actual files associated with a Dataroom that contain data, or are a document of interest. 
+Datafiles are the actual files associated with a Dataset that contain data, or are a document of interest. 
 
 - **[<code>POST</code> :username/:dataset_short_name](https://github.com/buzzdata/api-docs/blob/master/endpoints/datafiles/POST_username_dataset_short_name_create_datafile.md)** - Creates a Datafile within a Dataset.
 
