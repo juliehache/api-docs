@@ -13,6 +13,10 @@ If you are looking for the documentation for the current public API on buzzdata.
 
 - In order to use the API, you must be able to use an oAuth2 library in the language of your choice.
 - All API calls should be made over SSL connections.
+- Your application server must **not** send the header `X-Frame-Origin: DENY`, or `X-Frame-Origin: SAMEORIGIN` as this will prevent the 
+Application from being loaded inside an iFrame by the Browser. You should use the `X-Frame-Origin: ALLOW-FROM buzzdata.com` header, which you can
+read more about [here](http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx). Please contact
+[support@buzzdata.com](mailto:support@buzzdata.com) if you have any queries about this flag.
 
 ## Getting Started
 
