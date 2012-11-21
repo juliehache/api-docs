@@ -1,6 +1,6 @@
 # Article Resources
 
-    POST https://:HIVE_NAME.buzzdata.com/:username/:dataset_short_name/articles/
+    POST https://:HIVE_NAME.buzzdata.com/api/:username/:dataset_short_name/articles/
 
 ## Description
 

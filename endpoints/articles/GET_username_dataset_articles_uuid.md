@@ -1,6 +1,6 @@
 # Article Resources
 
-    GET https://:HIVE_NAME.buzzdata.com/:username/:dataset_short_name/articles/:uuid
+    GET https://:HIVE_NAME.buzzdata.com/api/:username/:dataset_short_name/articles/:uuid
 
 ## Description
 
