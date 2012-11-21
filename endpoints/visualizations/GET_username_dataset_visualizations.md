@@ -1,6 +1,6 @@
 # Visualizaiton Resources
 
-    GET https://:HIVE_NAME.buzzdata.com/:username/:dataset_short_name/visualizations/
+    GET https://:HIVE_NAME.buzzdata.com/api/:username/:dataset_short_name/visualizations/
 
 ## Description
 
