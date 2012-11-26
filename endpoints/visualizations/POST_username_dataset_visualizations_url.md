@@ -1,6 +1,6 @@
 # Visualization Resources
 
-    POST https://:HIVE_NAME.buzzdata.com/api/:username/:dataset_short_name/visualizations/
+    POST https://:HIVE_NAME.buzzdata.com/api/:username/:dataset_short_name/visualizations/url/
 
 ## Description
 
