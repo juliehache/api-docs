@@ -102,6 +102,10 @@ You will have to make sure the following link tags are present in your Applicati
 		href="http://mycoolapp.com/oembed?url=http://mycoolapp.com/visualizations/johns-visualization"
 		title="Kittens Born in 2012 oEmbed Profile" />
 
+### Registering to be an Embed.ly provider
+
+If you encounter any issues where Embed.ly is not properly discovering your oEmbed links, you might need to [register as a provider](http://embed.ly/providers/new).
+
 ### Summary
 
 - Make sure you application pages have the correct ```link``` tags as mentioned above in the ```HEAD``` HTML tag of your pages.
